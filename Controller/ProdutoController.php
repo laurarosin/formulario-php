@@ -1,13 +1,17 @@
 <?php
 
+namespace Formulario\Controller;
 
-class ProdutoController 
+
+use Formulario\Model\ProdutoModel;
+
+
+class ProdutoController extends Controller
 {
 
     public static function index() 
     {
-        include 'Model/ProdutoModel.php'; 
-        
+   
        
         $model = new ProdutoModel();
         $model->getAllRows();
@@ -17,7 +21,7 @@ class ProdutoController
     
     public static function form()
     {
-        include 'Model/ProdutoModel.php'; 
+     
         $model = new ProdutoModel();
       
         if(isset($_GET['id']))
@@ -28,7 +32,7 @@ class ProdutoController
 
     public static function save() {
 
-        include 'Model/ProdutoModel.php'; 
+ 
         $produto = new ProdutoModel();
         $produto->id = $_POST['id'];
         $produto->nome = $_POST['nome'];
@@ -42,7 +46,7 @@ class ProdutoController
 
     public static function delete()
     {
-        include 'Model/ProdutoModel.php'; 
+ 
 
         $model = new ProdutoModel();
 

@@ -1,6 +1,10 @@
 <?php
 
-class FuncionarioModel
+namespace Formulario\Model;
+
+use Formulario\DAO\FuncionarioDAO;
+
+class FuncionarioModel extends Model
 {
    
     public $id, $nome, $cargo;

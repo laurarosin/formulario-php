@@ -1,6 +1,10 @@
 <?php
 
-class PessoaModel
+namespace Formulario\Model;
+
+use Formulario\DAO\PessoaDAO;
+
+class PessoaModel extends Model
 {
    
     public $id, $nome, $rg, $cpf;
@@ -12,8 +16,7 @@ class PessoaModel
    
     public function save()
     {
-        include 'DAO/PessoaDAO.php';
-
+      
         $dao = new PessoaDAO();
 
         if(empty($this->id))
@@ -29,7 +32,7 @@ class PessoaModel
     }
         public function getAllRows()
         {
-            include 'DAO/PessoaDAO.php';
+          
             $dao = new PessoaDAO();
             $this->rows = $dao->select();
         }
@@ -37,7 +40,7 @@ class PessoaModel
 
         public function getById(int $id)
         {
-            include 'DAO/PessoaDAO.php';
+           
 
             $dao = new PessoaDAO();
 
@@ -48,8 +51,7 @@ class PessoaModel
 
         public function delete(int $id)
     {
-        include 'DAO/PessoaDAO.php'; 
-
+        
         $dao = new PessoaDAO();
 
         $dao->delete($id);

@@ -1,6 +1,10 @@
 <?php
 
-class ProdutoModel
+namespace Formulario\Model;
+
+use Formulario\DAO\ProdutoDAO;
+
+class ProdutoModel extends Model
 {
    
     public $id, $nome, $descricao, $preco;

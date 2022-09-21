@@ -1,7 +1,9 @@
 <?php
+namespace Formulario\Controller;
 
+use Formulario\Model\CategoriaModel;
 
-class CategoriaController 
+class CategoriaController extends Controller
 {
 
     public static function index() 

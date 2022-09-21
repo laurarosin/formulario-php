@@ -1,7 +1,9 @@
 <?php
+namespace Formulario\Controller;
 
+use Formulario\Model\FuncionarioModel;
 
-class FuncionarioController 
+ class FuncionarioController extends Controller
 {
 
     public static function index() 

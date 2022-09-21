@@ -1,6 +1,10 @@
 <?php
 
-class CategoriaModel
+namespace Formulario\Model;
+
+use Formulario\DAO\CategoriaDAO;
+
+class CategoriaModel extends MODEL
 {
    
     public $id, $descricao;

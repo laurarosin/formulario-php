@@ -1,12 +1,14 @@
 <?php
+namespace Formulario\Controller;
 
+use Formulario\Model\PessoaModel;
 
-class PessoaController 
+class PessoaController extends Controller
 {
+
 
     public static function index() 
     {
-        include 'Model/PessoaModel.php'; 
         
        
         $model = new PessoaModel();
@@ -17,7 +19,7 @@ class PessoaController
     
     public static function form()
     {
-        include 'Model/PessoaModel.php'; 
+   
         $model = new PessoaModel();
       
         if(isset($_GET['id']))
@@ -27,8 +29,7 @@ class PessoaController
 
 
     public static function save() {
-
-        include 'Model/PessoaModel.php'; 
+ 
         $pessoa = new PessoaModel();
         $pessoa->id = $_POST['id'];
         $pessoa->nome = $_POST['nome'];
@@ -46,7 +47,7 @@ class PessoaController
 
     public static function delete()
     {
-        include 'Model/PessoaModel.php'; 
+       
 
         $model = new PessoaModel();
 
