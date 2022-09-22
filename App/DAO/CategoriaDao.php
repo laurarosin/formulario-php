@@ -1,8 +1,8 @@
 <?php
 
-namespace Formulario\DAO;
+namespace App\DAO;
 
-use Formulario\Model\CategoriaModel;
+use App\Model\CategoriaModel;
 
 use \PDO;
 

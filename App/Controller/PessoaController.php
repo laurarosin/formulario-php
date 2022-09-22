@@ -1,7 +1,7 @@
 <?php
-namespace Formulario\Controller;
+namespace App\Controller;
 
-use Formulario\Model\PessoaModel;
+use App\Model\PessoaModel;
 
 class PessoaController extends Controller
 {

@@ -1,22 +1,23 @@
 <?php
 
-namespace Formulario\Model;
+namespace App\Model;
 
-use Formulario\DAO\ProdutoDAO;
+use App\DAO\PessoaDAO;
 
-class ProdutoModel extends Model
+class PessoaModel extends Model
 {
    
-    public $id, $nome, $descricao, $preco;
+    public $id, $nome, $rg, $cpf;
+    public $data_nascimento, $email;
+    public $telefone, $endereco;
     
     public $rows;
 
    
     public function save()
     {
-        include 'DAO/ProdutoDAO.php';
-
-        $dao = new ProdutoDAO();
+      
+        $dao = new PessoaDAO();
 
         if(empty($this->id))
         {
@@ -31,30 +32,30 @@ class ProdutoModel extends Model
     }
         public function getAllRows()
         {
-            include 'DAO/ProdutoDAO.php';
-            $dao = new ProdutoDAO();
+          
+            $dao = new PessoaDAO();
             $this->rows = $dao->select();
         }
 
 
         public function getById(int $id)
         {
-            include 'DAO/ProdutoDAO.php';
+           
 
-            $dao = new ProdutoDAO();
+            $dao = new PessoaDAO();
 
             $obj = $dao->selectById($id);
 
-            return ($obj) ? $obj : new ProdutoModel();
+            return ($obj) ? $obj : new PessoaModel();
         }
 
         public function delete(int $id)
     {
-        include 'DAO/ProdutoDAO.php'; 
-
-        $dao = new ProdutoDAO();
+        
+        $dao = new PessoaDAO();
 
         $dao->delete($id);
     }
 
     }
+

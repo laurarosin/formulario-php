@@ -1,9 +1,9 @@
 <?php
 
-namespace Formulario\Controller;
+namespace App\Controller;
 
 
-use Formulario\Model\ProdutoModel;
+use App\Model\ProdutoModel;
 
 
 class ProdutoController extends Controller

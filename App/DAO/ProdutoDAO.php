@@ -1,7 +1,7 @@
 <?php
-namespace Formulario\DAO;
+namespace App\DAO;
 
-use Formulario\Model\ProdutoModel;
+use App\Model\ProdutoModel;
 
 use \PDO;
 

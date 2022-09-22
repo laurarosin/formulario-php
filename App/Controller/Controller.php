@@ -1,6 +1,6 @@
 <?php
 
-namespace Formulario\Controller;
+namespace App\Controller;
 
 abstract class Controller
 {

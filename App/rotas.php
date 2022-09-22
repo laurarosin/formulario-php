@@ -1,14 +1,12 @@
 <?php
 
-
-
-use Formulario\Controller\PessoaController;
-
-use Formulario\Controller\ProdutoController;
-
-use Formulario\Controller\CategoriaController;
-
-use Formulario\Controller\FuncionarioController;
+use App\Controller\
+{
+    PessoaController,
+    ProdutoController,
+    CategoriaController,
+    FuncionarioController
+};
 
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

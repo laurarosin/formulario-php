@@ -1,6 +1,6 @@
 <?php
 
-namespace Formulario\Model;
+namespace App\Model;
 
 abstract class Model 
 {

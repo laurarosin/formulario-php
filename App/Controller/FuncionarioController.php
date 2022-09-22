@@ -1,7 +1,7 @@
 <?php
-namespace Formulario\Controller;
+namespace App\Controller;
 
-use Formulario\Model\FuncionarioModel;
+use App\Model\FuncionarioModel;
 
  class FuncionarioController extends Controller
 {

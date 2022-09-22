@@ -1,6 +1,6 @@
 <?php
 
-namespace Formulario\DAO;
+namespace App\DAO;
 
 use \PDO;
 

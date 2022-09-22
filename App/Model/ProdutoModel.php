@@ -1,22 +1,22 @@
 <?php
 
-namespace Formulario\Model;
+namespace App\Model;
 
-use Formulario\DAO\FuncionarioDAO;
+use App\DAO\ProdutoDAO;
 
-class FuncionarioModel extends Model
+class ProdutoModel extends Model
 {
    
-    public $id, $nome, $cargo;
+    public $id, $nome, $descricao, $preco;
     
     public $rows;
 
    
     public function save()
     {
-        include 'DAO/FuncionarioDAO.php';
+        include 'DAO/ProdutoDAO.php';
 
-        $dao = new FuncionarioDAO();
+        $dao = new ProdutoDAO();
 
         if(empty($this->id))
         {
@@ -31,28 +31,28 @@ class FuncionarioModel extends Model
     }
         public function getAllRows()
         {
-            include 'DAO/FuncionarioDAO.php';
-            $dao = new FuncionarioDAO();
+            include 'DAO/ProdutoDAO.php';
+            $dao = new ProdutoDAO();
             $this->rows = $dao->select();
         }
 
 
         public function getById(int $id)
         {
-            include 'DAO/FuncionarioDAO.php';
+            include 'DAO/ProdutoDAO.php';
 
-            $dao = new FuncionarioDAO();
+            $dao = new ProdutoDAO();
 
             $obj = $dao->selectById($id);
 
-            return ($obj) ? $obj : new FuncionarioModel();
+            return ($obj) ? $obj : new ProdutoModel();
         }
 
         public function delete(int $id)
     {
-        include 'DAO/FuncionarioDAO.php'; 
+        include 'DAO/ProdutoDAO.php'; 
 
-        $dao = new FuncionarioDAO();
+        $dao = new ProdutoDAO();
 
         $dao->delete($id);
     }

@@ -1,7 +1,7 @@
 <?php
-namespace Formulario\Controller;
+namespace App\Controller;
 
-use Formulario\Model\CategoriaModel;
+use App\Model\CategoriaModel;
 
 class CategoriaController extends Controller
 {
