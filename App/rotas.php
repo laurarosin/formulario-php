@@ -5,7 +5,8 @@ use App\Controller\
     PessoaController,
     ProdutoController,
     CategoriaController,
-    FuncionarioController
+    FuncionarioController,
+    LoginController
 };
 
 
@@ -84,7 +85,18 @@ switch($uri_parse)
     case '/funcionario/delete':
         FuncionarioController::delete();
     break;
-    
+
+    case '/login':
+        LoginController::index();
+    break;
+
+    case'/login/auth':
+        LoginController::auth();
+    break;
+
+    case 'login/logout':      
+        LoginController::logout();
+    break;  
 
     default:
     echo "erro 404";
