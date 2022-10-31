@@ -63,7 +63,7 @@ class FuncionarioDAO extends DAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("FuncionarioModel"); 
+        return $stmt->fetchObject("App\Model\FuncionarioModel"); 
     }
 
     public function delete(int $id)

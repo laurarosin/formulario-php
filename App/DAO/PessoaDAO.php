@@ -74,7 +74,7 @@ class PessoaDAO extends DAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("PessoaModel"); 
+        return $stmt->fetchObject("App\Model\PessoaModel"); 
     }
 
     public function delete(int $id)
