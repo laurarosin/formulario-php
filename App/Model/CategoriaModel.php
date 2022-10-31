@@ -14,8 +14,6 @@ class CategoriaModel extends Model
    
     public function save()
     {
-        include 'DAO/CategoriaDAO.php';
-
         $dao = new CategoriaDAO();
 
         if(empty($this->id))
@@ -31,7 +29,6 @@ class CategoriaModel extends Model
     }
     public function getAllRows()
     {
-        include 'DAO/CategoriaDAO.php';
         $dao = new CategoriaDAO();
         $this->rows = $dao->select();
     }
@@ -39,8 +36,6 @@ class CategoriaModel extends Model
 
     public function getById(int $id)
     {
-        include 'DAO/CategoriaDAO.php';
-
         $dao = new CategoriaDAO();
 
         $obj = $dao->selectById($id);
@@ -50,8 +45,6 @@ class CategoriaModel extends Model
 
     public function delete(int $id)
     {
-        include 'DAO/CategoriaDAO.php'; 
-
         $dao = new CategoriaDAO();
 
         $dao->delete($id);

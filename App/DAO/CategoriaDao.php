@@ -54,7 +54,6 @@ class CategoriaDAO extends DAO
 
     public function selectById(int $id)
     {
-        include_once 'Model/CategoriaModel.php';
 
         $sql = "SELECT * FROM categoria WHERE id = ?";
 
@@ -62,7 +61,7 @@ class CategoriaDAO extends DAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("CategoriaModel"); 
+        return $stmt->fetchObject("App\Model\CategoriaModel"); 
     }
 
     public function delete(int $id)
